@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import Navbar from './Navbar';
+import Navbar1 from './Navbar1';
 import Footer from './Footer';
 
 const ChatbotUI = () => {
@@ -51,7 +51,7 @@ const ChatbotUI = () => {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <Navbar />
+      <Navbar1 />
 
       <main className="flex-grow bg-gradient-to-tr from-blue-100 via-blue-50 to-white flex items-center justify-center p-4">
         <motion.div
