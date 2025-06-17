@@ -111,8 +111,6 @@ const ChatbotUI = () => {
           </div>
         </motion.div>
       </main>
-
-      <Footer />
     </div>
   );
 };

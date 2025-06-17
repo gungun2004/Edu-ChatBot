@@ -12,12 +12,12 @@ function App() {
   return (
     <Router>
       <Routes>
-        {/* <Route path="/home" element={user ? <ChatbotUI /> : <Navigate to="/login" />} /> */}
+        {/* <Route path="/chat" element={user ? <ChatbotUI /> : <Navigate to="/login" />} /> */}
         <Route path="/About" element={<About/>}/>
         <Route path="/" element={<HomePage/>} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
-        <Route path="/chat" element={<ChatbotUI/>} />
+         <Route path="/chat" element={<ChatbotUI />} />
       </Routes>
     </Router>
   );

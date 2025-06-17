@@ -43,12 +43,6 @@ const Navbar1 = ({ user = { avatarUrl: '/default-avatar.png', email: 'user@examp
                 {user.email}
               </div>
               <Link
-                to="/profile"
-                className="block px-4 py-2 text-sm text-blue-600 hover:bg-gray-100"
-              >
-                View Profile
-              </Link>
-              <Link
                 to="/login"
                 className="block px-4 py-2 text-sm text-red-600 hover:bg-gray-100"
               >
