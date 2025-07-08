@@ -5,22 +5,21 @@ import RegisterPage from "./Pages/RegisterPage";
 import ChatbotUI from "./Pages/ChatbotUi";
 import About from "./Pages/About";
 import HomePage from "./Pages/HomePage";
+import Contact from "./Pages/Contact";
 function App() {
   // For demo, pretend to check localStorage for user
   const user = JSON.parse(localStorage.getItem("user"));
-
   return (
     <Router>
       <Routes>
-        {/* <Route path="/chat" element={user ? <ChatbotUI /> : <Navigate to="/login" />} /> */}
-        <Route path="/About" element={<About/>}/>
-        <Route path="/" element={<HomePage/>} />
+        <Route path="/" element={user ? <HomePage /> : <Navigate to="/login" />} />
+        <Route path="/About" element={user?<About/>: <Navigate to="/login"/>} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
-         <Route path="/chat" element={<ChatbotUI />} />
+        <Route path="/contact" element={<Contact />} />
+         <Route path="/chat" element={user ? <ChatbotUI /> : <Navigate to="/login" />} />
       </Routes>
     </Router>
   );
 }
-
 export default App;

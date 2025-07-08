@@ -4,16 +4,16 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 const faqs = [
   {
-    question: "Is EduGO free to use?",
-    answer: "Yes! EduGO is completely free and always ready to help you learn.",
+    question: "Is HelpHub free to use?",
+    answer: "Yes! HelpHub is completely free and always ready to help you learn.",
   },
   {
     question: "Can I ask questions outside of academics?",
-    answer: "EduGO is strictly for educational use and won’t respond to unrelated topics.",
+    answer: "HelpHub is strictly for educational use and won’t respond to unrelated topics.",
   },
   {
-    question: "How does EduGO get its answers?",
-    answer: "EduGO is powered by advanced AI that understands and responds to educational queries accurately.",
+    question: "How does HelpHub get its answers?",
+    answer: "HelpHub is powered by advanced AI that understands and responds to educational queries accurately.",
   },
 ];
 
@@ -35,7 +35,7 @@ const About = () => {
           transition={{ duration: 0.8 }}
           className="text-4xl font-bold text-center text-blue-700 mb-6"
         >
-          🎓 Welcome to EduGO!
+          🎓 Welcome to HelpHub!
         </motion.h1>
 
         <motion.p
@@ -66,7 +66,7 @@ const About = () => {
             whileHover={{ scale: 1.05 }}
             className="bg-white rounded-2xl p-6 shadow-md border-t-4 border-indigo-200"
           >
-            <h2 className="text-xl font-semibold text-indigo-600 mb-2">⛔ What EduGO Won't Do</h2>
+            <h2 className="text-xl font-semibold text-indigo-600 mb-2">⛔ What HelpHub Won't Do</h2>
             <ul className="list-disc pl-5 space-y-1 text-gray-700">
               <li>No entertainment or personal chats</li>
               <li>No medical/legal/political advice</li>
@@ -78,7 +78,7 @@ const About = () => {
             whileHover={{ scale: 1.05 }}
             className="bg-white rounded-2xl p-6 shadow-md border-t-4 border-purple-200 col-span-full"
           >
-            <h2 className="text-xl font-semibold text-purple-600 mb-2">💡 Why EduGO is Cool</h2>
+            <h2 className="text-xl font-semibold text-purple-600 mb-2">💡 Why HelpHub is Cool</h2>
             <ul className="list-disc pl-5 space-y-1 text-gray-700">
               <li>Fast responses powered by AI</li>
               <li>Beautiful and clean interface</li>

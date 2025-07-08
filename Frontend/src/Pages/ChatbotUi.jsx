@@ -62,7 +62,7 @@ const ChatbotUI = () => {
         >
           {/* Header */}
           <div className="p-6 bg-blue-200 text-blue-900 text-2xl font-bold rounded-t-3xl shadow-inner">
-            <div className="flex items-center gap-2">📘 EduGO</div>
+            <div className="flex items-center gap-2">📘 HelpHub</div>
             <span className="text-sm font-medium text-blue-700 mt-1">
               Learn better. Ask smarter.
             </span>

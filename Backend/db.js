@@ -12,6 +12,4 @@ pool.connect()
     client.release();
   })
   .catch(err => console.error('Connection error', err.stack));
-
-
 module.exports = pool;

@@ -5,10 +5,8 @@ const dotenv = require("dotenv");
 dotenv.config();
 
 const router = express.Router();
-
 const GEMINI_API_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent";
 const API_KEY = process.env.GEMINI_API_KEY;
-
 router.post("/chat", async (req, res) => {
   const { message } = req.body;
 
@@ -39,7 +37,6 @@ router.post("/chat", async (req, res) => {
         ],
       }
     );
-
     const reply = response.data?.candidates?.[0]?.content?.parts?.[0]?.text || "No response.";
     res.json({ reply });
   } catch (err) {

@@ -1,14 +1,23 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-
+import { Link,useNavigate  } from 'react-router-dom';
+import { useState} from 'react';
 const Navbar = () => {
+    const [user, setUser] = useState(null);
+    const navigate=useNavigate();
+    // Logout handler
+  const handleLogout = () => {
+    localStorage.removeItem("user");
+    setUser(null);
+    navigate("/login");   
+  };
+
   return (
     <nav className="bg-blue-100 shadow-md">
       <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center space-x-2">
           <img src="https://tse3.mm.bing.net/th?id=OIP.G5Z5KqW9wN-2hH9EqFhiDQAAAA&pid=Api&P=0&h=180" alt="Logo" className="h-11 w-15 rounded-full" />
-          <span className="text-blue-800 font-bold text-xl">EduGO</span>
+          <span className="text-blue-800 font-bold text-xl">HelpHub</span>
         </div>
 
         <div className="hidden md:flex space-x-6 text-blue-800 font-medium">
@@ -34,16 +43,11 @@ const Navbar = () => {
         <div className="flex space-x-3">
           <Link
             to="/login"
-            className="px-4 py-2 text-blue-700 font-semibold border border-blue-400 rounded-lg hover:bg-blue-200 transition"
+            className="px-4 py-2 text-blue-700 font-semibold border border-blue-400 rounded-lg hover:bg-blue-200 transition" onClick={handleLogout}
           >
-            Login
+            Logout
           </Link>
-          <Link
-            to="/register"
-            className="px-4 py-2 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 transition"
-          >
-            Register
-          </Link>
+         
         </div>
       </div>
     </nav>
