@@ -39,10 +39,14 @@ router.post("/chat", async (req, res) => {
     );
     const reply = response.data?.candidates?.[0]?.content?.parts?.[0]?.text || "No response.";
     res.json({ reply });
-  } catch (err) {
-    console.error("Gemini error:", err.response?.data || err.message);
-    res.status(500).json({ error: "Something went wrong" });
-  }
+ } catch (err) {
+  console.error("Gemini error:", {
+    status: err.response?.status,
+    data: err.response?.data,
+    message: err.message,
+  });
+  res.status(500).json({ error: "Something went wrong" });
+}
 });
 
 module.exports = router;
