@@ -16,7 +16,7 @@ const profileRoutes = require('./routes/profileroute');
 
 app.use('/api/auth', authRoutes);      
 app.use('/api/chatbot', chatbotRoutes);  
-app.use('/api/contact', contactRoutes); 
+app.use('/api', contactRoutes); 
 app.use('/api/profile', profileRoutes);  
 
 
